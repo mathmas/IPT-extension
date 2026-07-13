@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Fill Document Label",
+  "version": "0.1",
+  "description": "Fill Document Label",
+  
+  "permissions": ["activeTab"],
+  
+  "content_scripts": [
+    {
+      "matches": ["https://app.ipaidthat.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+    "browser_specific_settings": {
+        "gecko": {
+        "id": "autofiller-id-label@monsite.private",
+        "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+        }
+    }
+}
